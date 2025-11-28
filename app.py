@@ -47,6 +47,6 @@ params = {
 response = requests.get(url, params=params).json()['fare']
 
 
-if st.button('ESTIMATE!'):
+if st.button('Estimate!'):
     # print is visible in the server output, not in the page
     st.markdown(f"## Predicted cost: {round(response, 2)}$")
