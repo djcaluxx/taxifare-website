@@ -5,6 +5,8 @@ import requests
 '''
 # Get a not so solid estimate of your NY taxifare.
 #### You should walk anymay.
+
+
 '''
 
 st.markdown('''
@@ -27,9 +29,9 @@ dropoff_lat = st.text_input('Dropoff_latitude', '-72')
 
 url = 'https://taxifare.lewagon.ai/predict'
 
-if url == 'https://taxifare.lewagon.ai/predict':
+# if url == 'https://taxifare.lewagon.ai/predict':
 
-    st.markdown('Maybe you want to use your own API for the prediction, not the one provided by Le Wagon...')
+#     st.markdown('Maybe you want to use your own API for the prediction, not the one provided by Le Wagon...')
 
 
 date_time = f"{d} {t}"
@@ -45,9 +47,6 @@ params = {
 response = requests.get(url, params=params).json()['fare']
 
 
-if st.button('Get price!'):
+if st.button('ESTIMATE!'):
     # print is visible in the server output, not in the page
     st.markdown(f"## Predicted cost: {round(response, 2)}$")
-
-else:
-    st.write('Just fill the fieds bro!')
