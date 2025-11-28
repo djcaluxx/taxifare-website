@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 import requests
+import pandas as pd
 
 '''
 # Get a not so solid estimate of your NY taxifare.
@@ -32,6 +33,20 @@ url = 'https://taxifare.lewagon.ai/predict'
 # if url == 'https://taxifare.lewagon.ai/predict':
 
 #     st.markdown('Maybe you want to use your own API for the prediction, not the one provided by Le Wagon...')
+
+
+def get_map_data():
+
+    # return pd.DataFrame(
+    #         [50, 50] + [37.76, -122.4],
+    #         columns=['lat', 'lon']
+
+    return pd.DataFrame(dict('lat': [-74.3, -73.7],
+                             'lon': [40.5, 40.9]))
+
+df = get_map_data()
+
+st.map(df, longitude = 'long', latitude = 'lat')
 
 
 date_time = f"{d} {t}"
