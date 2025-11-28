@@ -20,13 +20,13 @@ d = st.date_input("Date", datetime.date(2019, 7, 6))
 
 t = st.time_input('Time', datetime.time(8, 45))
 
-pickup_long = st.text_input('Pickup_longitude', '41')
+pickup_long = st.text_input('Pickup_longitude', '-73.9')
 
-pickup_lat = st.text_input('Pickup_latitude', '-72')
+pickup_lat = st.text_input('Pickup_latitude', '40.6')
 
-dropoff_long = st.text_input('Dropoff_longitude', '41')
+dropoff_long = st.text_input('Dropoff_longitude', '-74.1')
 
-dropoff_lat = st.text_input('Dropoff_latitude', '-72')
+dropoff_lat = st.text_input('Dropoff_latitude', '40.7')
 
 url = 'https://taxifare.lewagon.ai/predict'
 
