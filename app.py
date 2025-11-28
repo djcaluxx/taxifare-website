@@ -37,19 +37,14 @@ url = 'https://taxifare.lewagon.ai/predict'
 
 def get_map_data():
 
-    # return pd.DataFrame(
-    #         [50, 50] + [37.76, -122.4],
-    #         columns=['lat', 'lon']
-
     return pd.DataFrame({
-        'lon': [pickup_long, dropoff_long],
-        'lat': [pickup_lat, dropoff_lat],
-        # 'col': [(0, 255, 0), (255, 0, 0)]
+        'lon': [-74.3, -73.7],
+        'lat': [40.5, 40.9]
         })
 
 df = get_map_data()
+
 st.map(df, longitude = 'long', latitude = 'lat')
-# st.map(df, longitude = 'long', latitude = 'lat', color= 'col')
 
 
 date_time = f"{d} {t}"
