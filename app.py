@@ -49,7 +49,7 @@ params = {
 '''
 3. Let's call our API using the `requests` package...
 '''
-response = requests.get(url, params=params).json()[0]
+response = requests.get(url, params=params).json()
 
 '''
 4. Let's retrieve the prediction from the **JSON** returned by the API...
