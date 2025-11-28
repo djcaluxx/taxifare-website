@@ -48,8 +48,8 @@ def get_map_data():
         })
 
 df = get_map_data()
-
-st.map(df, longitude = 'long', latitude = 'lat', color= 'col')
+st.map(df, longitude = 'long', latitude = 'lat')
+# st.map(df, longitude = 'long', latitude = 'lat', color= 'col')
 
 
 date_time = f"{d} {t}"
