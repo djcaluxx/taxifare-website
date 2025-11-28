@@ -3,7 +3,7 @@ import datetime
 import requests
 
 '''
-# TaxiFareModel front
+# Get a not so solid estimate of your NY taxifare. You should walk anymay.
 '''
 
 st.markdown('''
