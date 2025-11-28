@@ -35,11 +35,18 @@ url = 'https://taxifare.lewagon.ai/predict'
 #     st.markdown('Maybe you want to use your own API for the prediction, not the one provided by Le Wagon...')
 
 
+# def get_map_data():
+
+#     return pd.DataFrame({
+#         'lon': [-74.3, -73.7],
+#         'lat': [40.5, 40.9]
+#         })
+
 def get_map_data():
 
     return pd.DataFrame({
-        'lon': [-74.3, -73.7],
-        'lat': [40.5, 40.9]
+        'lon': [float(pickup_long), float(dropoff_long)],
+        'lat': [float(pickup_lat), float(dropoff_lat)]
         })
 
 df = get_map_data()
