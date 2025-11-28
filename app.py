@@ -24,8 +24,6 @@ dropoff_long = st.text_input('Dropoff_longitude', '41')
 
 dropoff_lat = st.text_input('Dropoff_latitude', '-72')
 
-
-
 url = 'https://taxifare.lewagon.ai/predict'
 
 if url == 'https://taxifare.lewagon.ai/predict':
@@ -54,4 +52,9 @@ response = requests.get(url, params=params).json()['fare']
 4. Let's retrieve the prediction from the **JSON** returned by the API...
 '''
 
-st.markdown(f"Predicted cost: {round(response, 2)}$")
+if st.button('Get price!'):
+    # print is visible in the server output, not in the page
+    st.markdown(f"## Predicted cost: {round(response, 2)}$")
+
+else:
+    st.write('Just fill the fieds bro!')
