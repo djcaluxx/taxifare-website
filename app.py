@@ -46,12 +46,13 @@ def get_map_data():
 
     return pd.DataFrame({
         'lon': [float(pickup_long), float(dropoff_long)],
-        'lat': [float(pickup_lat), float(dropoff_lat)]
+        'lat': [float(pickup_lat), float(dropoff_lat)],
+        'col': [(0, 255, 0), (255, 0, 0)]
         })
 
 df = get_map_data()
 
-st.map(df, longitude = 'long', latitude = 'lat')
+st.map(df, longitude = 'long', latitude = 'lat', color = 'col')
 
 
 date_time = f"{d} {t}"
