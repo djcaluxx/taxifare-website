@@ -30,9 +30,7 @@ if url == 'https://taxifare.lewagon.ai/predict':
 
     st.markdown('Maybe you want to use your own API for the prediction, not the one provided by Le Wagon...')
 
-'''
-2. Let's build a dictionary containing the parameters for our API...
-'''
+
 date_time = f"{d} {t}"
 params = {
     "pickup_datetime": date_time,
@@ -43,14 +41,8 @@ params = {
     "passenger_count": passengers
     }
 
-'''
-3. Let's call our API using the `requests` package...
-'''
 response = requests.get(url, params=params).json()['fare']
 
-'''
-4. Let's retrieve the prediction from the **JSON** returned by the API...
-'''
 
 if st.button('Get price!'):
     # print is visible in the server output, not in the page
