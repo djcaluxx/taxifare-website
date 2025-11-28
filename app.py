@@ -11,7 +11,7 @@ Just fill the fields and move on bro
 ''')
 
 d = st.date_input(
-    "Date:",
+    "Date",
     datetime.date(2019, 7, 6))
 
 t = st.time_input('Time', datetime.time(8, 45))
@@ -49,7 +49,7 @@ params = {
 '''
 3. Let's call our API using the `requests` package...
 '''
-response = requests.get(url, params=params).json()['fare']
+response = requests.get(url, params=params).json()[0]
 
 '''
 4. Let's retrieve the prediction from the **JSON** returned by the API...
