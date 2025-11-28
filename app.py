@@ -54,6 +54,6 @@ response = requests.get(url, params=params).json()
 '''
 4. Let's retrieve the prediction from the **JSON** returned by the API...
 '''
-
-st.markdown(f"Predicted cost: {round(response, 2)}")
+st.markdown(response)
+# st.markdown(f"Predicted cost: {round(response, 2)}")
 ## Finally, we can display the prediction to the user
