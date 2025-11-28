@@ -4,14 +4,14 @@ import requests
 import pandas as pd
 
 '''
-# Get a not so solid estimate of your NY taxifare.
+# Get a not so solid estimate of your NY taxi fare.
 #### You should walk anymay.
 
 
 '''
 
 st.markdown('''
-Just fill the fields and move on bro
+Just fill the fields and move on bro.
 ''')
 
 passengers = st.text_input('Passenger_count', '1')
@@ -42,13 +42,14 @@ def get_map_data():
     #         columns=['lat', 'lon']
 
     return pd.DataFrame({
-        'lon': [-74.3, -73.7],
-        'lat': [40.5, 40.9]
+        'lon': [pickup_long, dropoff_long],
+        'lat': [pickup_lat, dropoff_lat],
+        'col': [(0, 255,0), (255, 0, 0)]
         })
 
 df = get_map_data()
 
-st.map(df, longitude = 'long', latitude = 'lat')
+st.map(df, longitude = 'long', latitude = 'lat', color= 'col')
 
 
 date_time = f"{d} {t}"
