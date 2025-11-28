@@ -16,13 +16,13 @@ d = st.date_input(
 
 t = st.time_input('Time', datetime.time(8, 45))
 
-pickup_long = st.text_input('Pickup_longitude', 'longitude')
+pickup_long = st.text_input('Pickup_longitude', '41')
 
-pickup_lat = st.text_input('Pickup_latitude', 'latitude')
+pickup_lat = st.text_input('Pickup_latitude', '-72')
 
-dropoff_long = st.text_input('Dropoff_longitude', 'longitude')
+dropoff_long = st.text_input('Dropoff_longitude', '41')
 
-dropoff_lat = st.text_input('Dropoff_latitude', 'latitude')
+dropoff_lat = st.text_input('Dropoff_latitude', '-72')
 
 passengers = st.text_input('Passenger_count', '2')
 
@@ -49,11 +49,11 @@ params = {
 '''
 3. Let's call our API using the `requests` package...
 '''
-response = requests.get(url, params=params).json()
+response = requests.get(url, params=params).json()['fare']
 
 '''
 4. Let's retrieve the prediction from the **JSON** returned by the API...
 '''
-st.markdown(response)
-# st.markdown(f"Predicted cost: {round(response, 2)}")
+
+st.markdown(f"Predicted cost: {round(response, 2)}")
 ## Finally, we can display the prediction to the user
