@@ -52,7 +52,7 @@ def get_map_data():
 
 df = get_map_data()
 
-st.map(df, longitude = 'long', latitude = 'lat', color = 'col')
+st.map(df, longitude = 'long', latitude = 'lat', color = 'col', size = 5)
 
 
 date_time = f"{d} {t}"
