@@ -10,9 +10,9 @@ st.markdown('''
 Just fill the fields and move on bro
 ''')
 
-d = st.date_input(
-    "Date",
-    datetime.date(2019, 7, 6))
+passengers = st.text_input('Passenger_count', '1')
+
+d = st.date_input("Date", datetime.date(2019, 7, 6))
 
 t = st.time_input('Time', datetime.time(8, 45))
 
@@ -24,7 +24,6 @@ dropoff_long = st.text_input('Dropoff_longitude', '41')
 
 dropoff_lat = st.text_input('Dropoff_latitude', '-72')
 
-passengers = st.text_input('Passenger_count', '2')
 
 
 url = 'https://taxifare.lewagon.ai/predict'
@@ -55,5 +54,4 @@ response = requests.get(url, params=params).json()['fare']
 4. Let's retrieve the prediction from the **JSON** returned by the API...
 '''
 
-st.markdown(f"Predicted cost: {round(response, 2)}")
-## Finally, we can display the prediction to the user
+st.markdown(f"Predicted cost: {round(response, 2)}$")
