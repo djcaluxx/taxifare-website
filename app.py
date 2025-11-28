@@ -42,8 +42,8 @@ def get_map_data():
     #         columns=['lat', 'lon']
 
     return pd.DataFrame({
-        'lat': [-74.3, -73.7],
-        'lon': [40.5, 40.9]
+        'lon': [-74.3, -73.7],
+        'lat': [40.5, 40.9]
         })
 
 df = get_map_data()
