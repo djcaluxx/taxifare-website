@@ -44,7 +44,7 @@ def get_map_data():
     return pd.DataFrame({
         'lon': [pickup_long, dropoff_long],
         'lat': [pickup_lat, dropoff_lat],
-        'col': [(0, 255,0), (255, 0, 0)]
+        # 'col': [(0, 255, 0), (255, 0, 0)]
         })
 
 df = get_map_data()
